@@ -19,4 +19,5 @@ public class Kunde {
     private List<Auto> autos;
 
     // TODO: Hier muss irgendetwas mit Autos hin...
+    // Done!
 }
