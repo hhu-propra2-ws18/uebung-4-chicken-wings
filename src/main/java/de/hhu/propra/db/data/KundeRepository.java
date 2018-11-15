@@ -4,5 +4,5 @@ import de.hhu.propra.db.entities.Kunde;
 import org.springframework.data.repository.CrudRepository;
 
 public interface KundeRepository extends CrudRepository<Kunde, Long> {
-
+    public List<Kunde> findAll();
 }
