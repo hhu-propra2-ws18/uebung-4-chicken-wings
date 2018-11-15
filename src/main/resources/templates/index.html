@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -29,6 +29,15 @@
         <td>
             <ul>
                 <li>Volkswagen -- schwarz (2000 ccm)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr th:each="kunde, iterationStatus : ${kunden} ">
+        <td th:text="${kunde.name}"></td>
+        <td th:text="${kunde.stadt}"></td>
+        <td th:text="${kunde.plz}"></td>
+        <td th:if="${kunde.autos!=null}" th:each="auto, iterationStatus : ${kunde.autos}">
+            <ul th:text="|${auto.marke}--${auto.farbe}(${auto.hubraum})|">
             </ul>
         </td>
     </tr>
