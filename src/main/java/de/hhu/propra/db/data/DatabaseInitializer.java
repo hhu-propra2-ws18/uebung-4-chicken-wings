@@ -30,6 +30,7 @@ public class DatabaseInitializer implements ServletContextInitializer{
             kunde.setName(faker.name().fullName());
             kunde.setStadt(faker.address().cityName());
             kunde.setPlz(Integer.parseInt(faker.address().zipCode()));
+            kunde.setPokemon(faker.pokemon().name());
             final List<Auto> autos = IntStream.range(0, faker.number().numberBetween(0, 3)).mapToObj(j -> {
                 Auto a = new Auto();
                 a.setFarbe(faker.color().name());

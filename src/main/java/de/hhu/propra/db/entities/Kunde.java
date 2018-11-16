@@ -14,6 +14,7 @@ public class Kunde {
 
     private String name;
     private String stadt;
+    private String pokemon;
     private Integer plz;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Auto> autos;

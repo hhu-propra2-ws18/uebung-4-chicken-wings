@@ -18,6 +18,7 @@
         <th>Name</th>
         <th>Stadt</th>
         <th>PLZ</th>
+        <th>Pokemon</th>
         <th>Autos</th>
     </tr>
     </thead>
@@ -26,6 +27,7 @@
         <td>Vorwerk & Co. KG</td>
         <td>Wuppertal</td>
         <td>89140</td>
+        <td>Pikachu</td>
         <td>
             <ul>
                 <li>Volkswagen -- schwarz (2000 ccm)</li>
@@ -36,6 +38,7 @@
         <td th:text="${kunde.name}"></td>
         <td th:text="${kunde.stadt}"></td>
         <td th:text="${kunde.plz}"></td>
+        <td th:text="${kunde.pokemon}"></td>
         <td th:if="${kunde.autos!=null}" th:each="auto, iterationStatus : ${kunde.autos}">
             <ul th:text="|${auto.marke}--${auto.farbe}(${auto.hubraum})|">
             </ul>
